@@ -19,7 +19,9 @@ createImageArea = function(files){
         if(item.type.search('image')!=-1){
            var imageComponent = createImage(item);
         }
-        imgAreaComponent.insertAdjacentElement('beforeend',imageComponent);
+        if(imageComponent){
+            imgAreaComponent.insertAdjacentElement('beforeend',imageComponent);
+        }
     })
     return imgAreaComponent;
 }
